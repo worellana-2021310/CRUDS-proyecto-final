@@ -16,7 +16,7 @@ const CategoriaSchema = Schema({
     categoria: {
         type: String,
         required: true,
-        emun: ['SUV', '4x4','Sport','Cupé','Sedan']
+        emun: ['SUV', '4x4','Sport','Cupé','Sedan', 'Pickup']
     },
     estado: {
         type: Boolean,
