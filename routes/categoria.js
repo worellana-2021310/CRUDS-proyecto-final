@@ -2,7 +2,6 @@ const { Router } = require('express');
 const { check } = require('express-validator');
 
 const { getCategoria, postCategoria, putCategoria, deleteCategoria } = require('../controllers/categoria');
-const { validarCampos } = require('../middlewares/validar-campos');
 
 const router = Router();
 

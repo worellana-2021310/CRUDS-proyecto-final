@@ -1,13 +1,14 @@
 const { Schema, model } = require('mongoose');
 
 const CategoriaSchema = Schema({
+    
     modelo: {
         type: String,
         required: [true, 'El modelo es obligatorio']
     },
     marca: {
         type: String,
-        required: [true, 'La marca es obligatoria'],
+        required: [true, 'La marca es obligatoria']
     },
     asesoria: {
         type: String,
