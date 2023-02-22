@@ -11,8 +11,9 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.categoriaPath = '/api/categoria'
-        this.authPath = '/api/auth';
-        this.usuarioPath = '/api/usuario';
+        this.authPath = '/api/auth'
+        this.usuarioPath = '/api/usuario'
+        this.productoPath = '/api/producto'
 
         this.conectarDB();
         this.middlewares();
@@ -34,7 +35,9 @@ class Server {
     routes(){
         this.app.use( this.categoriaPath , require('../routes/categoria') );
         this.app.use( this.authPath , require('../routes/auth') );
+        this.app.use( this.productoPath, require('../routes/producto'));
         this.app.use( this.usuarioPath , require('../routes/usuario') );
+
     }
 
     listen(){
