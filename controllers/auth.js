@@ -15,7 +15,6 @@ const login = async (req = request, res = response) => {
         if (!usuario) {
             return res.status(404).json({
                 msg: 'No se pudo encontrar el correo.',
-                //usuario
             });
         }
 

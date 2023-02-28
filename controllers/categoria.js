@@ -4,7 +4,6 @@ const Categoria = require('../models/categoria');
 
 const getCategoria = async (req = request, res = response) => {
 
-    //Condición, me busca solo los usuarios que tengan estado en true
     const query = { estado: true };
 
     const listaCategoria = await Promise.all([
@@ -45,7 +44,7 @@ const deleteCategoria = async (req = request, res = response) => {
 
     const { id } = req.params;
     const categoriaEliminada = await Categoria.findByIdAndDelete(id)
-    
+
     res.json({
         msg: '----- Eliminado exitosamente -----',
         categoriaEliminada

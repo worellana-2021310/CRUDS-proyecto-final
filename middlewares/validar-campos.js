@@ -6,8 +6,6 @@ const validarCampos = (req, res, next) => {
     if (!errors.isEmpty()) {
         return res.status(400).json(errors);
     }
-
-    //Next sirve para seguir ejecutando el middleware
     next();
 }
 
